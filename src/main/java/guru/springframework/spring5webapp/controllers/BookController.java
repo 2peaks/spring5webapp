@@ -17,6 +17,7 @@ public class BookController {
     @RequestMapping("/books")
     public String getBooks(Model model) {
         model.addAttribute("books", bookRepository.findAll());
-        return "books";
+        // tell Spring to get list.html under templates/books folder.
+        return "books/list";
     }
 }
